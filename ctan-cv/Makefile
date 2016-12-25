@@ -1,17 +1,15 @@
 # variables
-CV = cv
-RESUME = resume
+CV = cv.tex
+RESUME = resume.tex
 COMPILE = latexmk
 RM = rm -rf
 
 # rules
 .PHONY : all clean
 
-all : cv, resume
-
-cv : 
+mycv : 
 	$(COMPILE) $(CV)
-resume : 
+myresume : 
 	$(COMPILE) $(RESUME)
 clean :
 	$(COMPILE) -C
